@@ -3,11 +3,11 @@ Theme Name:
 Author: yaminncco
 
 Colors:
-	Body 		  : #868F9B
-	Headers 	: #10161A
-	Primary 	: #6195FF
-	Dark      : #FCFCFF
-	Grey 		  : #F4F4F4 #FAFAFA #EEE
+    Body          : #868F9B
+    Headers     : #10161A
+    Primary     : #6195FF
+    Dark      : #FCFCFF
+    Grey          : #F4F4F4 #FAFAFA #EEE
 
 Fonts: Montserrat Varela Round
 
@@ -38,18 +38,20 @@ Table OF Contents
 ------------------------------------*/
 
 /*------------------------------------*\
-	General
+    General
 \*------------------------------------*/
 
 
 /* -- typography -- */
 
 body {
-    font-family: 'Varela Round', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.43;
     overflow-x: hidden;
-    color: #868F9B;
+    color: #484848;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -81,7 +83,7 @@ h5 {
 }
 
 a {
-    color: #6195FF;
+    color: #484848;
     text-decoration: none;
     -webkit-transition: 0.2s opacity;
     transition: 0.2s opacity;
@@ -91,7 +93,7 @@ a:hover, a:focus {
     text-decoration: none;
     outline: none;
     opacity: 0.8;
-    color: #6195FF;
+    color: #484848;
 }
 
 .main-color {
@@ -168,8 +170,8 @@ ul, ol {
     top: 0;
     right: 0;
     bottom: 0;
-    opacity: .8;
-    background: #1C1D21;
+    opacity: .6;
+    background: #fff;
 }
 
 
@@ -181,15 +183,24 @@ ul, ol {
 }
 
 .section-header .title {
-    text-transform: capitalize;
+    font-weight: 700 !important;
+    margin: 0px !important;
+    word-wrap: break-word !important;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    font-size: 36px !important;
+    line-height: 40px !important;
+    letter-spacing: -0.6px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    color: #484848 !important;
 }
 
 .title:after {
     content:"";
-  	display:block;
-  	height:4px;
-  	width:40px;
-  	background-color: #6195FF;
+    display:block;
+    height:4px;
+    width:40px;
+    background-color: #484848;
     margin-top: 20px;
 }
 
@@ -203,7 +214,7 @@ input[type="text"], input[type="email"], input[type="password"], input[type="num
     height: 40px;
     width: 100%;
     border: none;
-	  background: #F4F4F4;
+    background: #F4F4F4;
     border-bottom: 2px solid #EEE;
     color: #354052;
     padding: 0px 10px;
@@ -257,7 +268,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 
 
 /*------------------------------------*\
-	Logo
+    Logo
 \*------------------------------------*/
 
 .navbar-brand {
@@ -270,11 +281,11 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 }
 
 #nav:not(.nav-transparent):not(.fixed-nav) .navbar-brand .logo-alt {
-	display: none;
+    display: none;
 }
 
 #nav.nav-transparent:not(.fixed-nav) .navbar-brand .logo {
-	display: none;
+    display: none;
 }
 
 #nav.fixed-nav .navbar-brand .logo-alt {
@@ -292,7 +303,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 
 
 /*------------------------------------*\
-	Navigation
+    Navigation
 \*------------------------------------*/
 
 #nav {
@@ -335,7 +346,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
         transition: 0.2s color;
     }
     .main-nav>li>a {
-        color: #10161A;
+        color: #484848;
         padding: 15px 0px;
     }
     #nav.nav-transparent:not(.fixed-nav) .main-nav>li>a {
@@ -343,12 +354,11 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     }
     .main-nav>li>a:hover, .main-nav>li>a:focus, .main-nav>li.active>a {
         background: transparent;
-        color: #6195FF;
     }
     .main-nav>li>a:after {
         content: "";
         display: block;
-        background-color: #6195FF;
+        background-color: #484848;
         height: 2px;
         width: 0%;
         -webkit-transition: 0.2s width;
@@ -377,7 +387,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
         position: absolute;
         right: -50%;
         top: 0;
-        background-color: #6195FF;
+        background-color: #484848;
         width: 200px;
         -webkit-box-shadow: 0px 5px 5px -5px rgba(53, 64, 82, 0.2);
         box-shadow: 0px 5px 5px -5px rgba(53, 64, 82, 0.2);
@@ -465,10 +475,10 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
         transition: 0.2s all;
     }
     .main-nav>li.active {
-        border-left: 6px solid #6195FF;
+        border-left: 6px solid #484848;
     }
     .main-nav li a:hover, .main-nav li a:focus {
-        background-color: #6195FF;
+        background-color: #484848;
         color: #FFF;
         opacity: 1;
     }
@@ -571,7 +581,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 
 
 /*------------------------------------*\
-	Header
+    Header
 \*------------------------------------*/
 
 header {
@@ -621,7 +631,7 @@ header {
 
 
 /*------------------------------------*\
-	About
+    About
 \*------------------------------------*/
 
 .about {
@@ -666,7 +676,7 @@ header {
 
 
 /*------------------------------------*\
-	Portfolio
+    Portfolio
 \*------------------------------------*/
 
 .work {
@@ -738,7 +748,7 @@ header {
     -ms-transform: translateY(100%);
     transform: translateY(100%);
     opacity: 0;
-    color: #6195FF;
+    color: #008489;
     margin-bottom: 5px;
     -webkit-transition: 0.2s all;
     transition: 0.2s all;
@@ -767,7 +777,7 @@ header {
     display: inline-block;
     width: 50px;
     height: 50px;
-    background-color: #6195FF;
+    background-color: #008489;
     color: #FFF;
     line-height: 50px;
     text-align: center;
@@ -781,7 +791,7 @@ header {
 
 
 /*------------------------------------*\
-	Services
+    Services
 \*------------------------------------*/
 
 .service {
@@ -827,7 +837,7 @@ header {
 }
 
 /*------------------------------------*\
-	Why choose us
+    Why choose us
 \*------------------------------------*/
 
 .feature {
@@ -837,13 +847,24 @@ header {
     float: left;
     padding: 5px;
     border-radius: 50%;
-    color: #6195FF;
-    border: 1px solid #6195FF;
+    color: #484848;
+    border: 1px solid #484848;
     margin-right: 5px;
 }
 
+#features p {
+    margin: 0 0 10px !important;
+    font-size: 19px !important;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    line-height: 24px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    color: #484848 !important;
+    font-weight: 300 !important;
+}
+
 /*------------------------------------*\
-	Numbers
+    Numbers
 \*------------------------------------*/
 
 .number {
@@ -852,19 +873,27 @@ header {
 }
 
 .number i {
-    color: #6195FF;
-    font-size: 36px;
+    color: #484848;
+    font-size: 23px;
     margin-bottom: 20px;
 }
 
 .number h3 {
-    font-size: 36px;
+    color: #484848;
+    font-size: 24px;
     margin-bottom: 10px;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
 }
 
+.number span {
+    color: #484848;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+}
 
 /*------------------------------------*\
-	Pricing
+    Pricing
 \*------------------------------------*/
 
 .pricing {
@@ -958,7 +987,7 @@ header {
 }
 
 /*------------------------------------*\
-	Testimonial
+    Testimonial
 \*------------------------------------*/
 
 .testimonial {
@@ -994,7 +1023,7 @@ header {
 
 
 /*------------------------------------*\
-	Team
+    Team
 \*------------------------------------*/
 
 .team {
@@ -1098,7 +1127,7 @@ header {
 
 
 /*------------------------------------*\
-	Blog
+    Blog
 \*------------------------------------*/
 
 .blog {
@@ -1127,7 +1156,7 @@ header {
 }
 
 /*------------------------------------*\
-	Blog post
+    Blog post
 \*------------------------------------*/
 
 #main .blog .blog-content {
@@ -1284,7 +1313,7 @@ header {
 }
 
 .reply-form form .input, .reply-form form .input , .reply-form form textarea {
-	margin-bottom:20px;
+    margin-bottom:20px;
 }
 
 .reply-form form .input, .reply-form form .input {
@@ -1298,7 +1327,7 @@ header {
 
 
 /*------------------------------------*\
-	Blog sidebar
+    Blog sidebar
 \*------------------------------------*/
 
 #aside .widget {
@@ -1322,7 +1351,7 @@ header {
 #aside .widget-search .search-btn {
     position: absolute;
     right: 0px;
-	  bottom: 0px;
+      bottom: 0px;
     width: 40px;
     height: 40px;
     border: none;
@@ -1412,7 +1441,7 @@ header {
 
 
 /*------------------------------------*\
-	Contact
+    Contact
 \*------------------------------------*/
 
 .contact {
@@ -1445,7 +1474,7 @@ header {
 }
 
 /*------------------------------------*\
-	Footer
+    Footer
 \*------------------------------------*/
 
 #footer {
@@ -1492,7 +1521,7 @@ header {
 
 
 /*------------------------------------*\
-	Responsive
+    Responsive
 \*------------------------------------*/
 
 
@@ -1500,17 +1529,26 @@ header {
 
 @media only screen and (max-width: 767px) {
   .section-header h2.title {
-  		font-size:31.5px;
-	}
+        font-weight: 700 !important;
+        margin: 0px !important;
+        word-wrap: break-word !important;
+        font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+        font-size: 36px !important;
+        line-height: 40px !important;
+        letter-spacing: -0.6px !important;
+        padding-top: 6px !important;
+        padding-bottom: 6px !important;
+        color: #484848 !important;
+    }
 
   .main-btn , .default-btn , .outline-btn , .white-btn  {
-  		padding: 8px 22px;
-  		font-size:14px;
-	}
+        padding: 8px 22px;
+        font-size:14px;
+    }
 
   .home-content h1 {
-		font-size:36px;
-	}
+        font-size:36px;
+    }
 
   .header-wrapper h2 {
       margin-bottom: 20px;
@@ -1526,12 +1564,12 @@ header {
 
 @media only screen and (max-width: 480px) {
   #portfolio [class*='col-xs'] {
-		  width:100%;
-	}
+          width:100%;
+    }
 
   #numbers [class*='col-xs'] {
-		  width:100%;
-	}
+          width:100%;
+    }
 
   .contact-form .input:nth-child(1), .contact-form .input:nth-child(2) {
       width: 100%;
@@ -1573,7 +1611,7 @@ header {
 
 
 /*------------------------------------*\
-	Owl theme
+    Owl theme
 \*------------------------------------*/
 
 /* -- dots -- */
@@ -1589,8 +1627,8 @@ header {
     background: #6195FF;
 }
 .owl-theme .owl-dots .owl-dot.active span {
-	  background: #6195FF;
-	  width:20px;
+      background: #6195FF;
+      width:20px;
 }
 
 /* -- nav -- */
@@ -1613,12 +1651,12 @@ header {
             transform: translateY(-50%);
     background: #6195FF;
     color: #FFF;
-  	padding: 0px;
-  	width: 50px;
-  	height: 50px;
-  	border-radius:3px;
-  	line-height: 50px;
-  	margin: 0;
+    padding: 0px;
+    width: 50px;
+    height: 50px;
+    border-radius:3px;
+    line-height: 50px;
+    margin: 0;
 }
 
 .owl-theme .owl-prev {
@@ -1636,25 +1674,25 @@ header {
 
 
 /*------------------------------------*\
-	Back to top
+    Back to top
 \*------------------------------------*/
 
 #back-to-top {
-  	display:none;
-  	position: fixed;
-  	bottom: 20px;
-  	right: 20px;
-  	width: 50px;
-  	height: 50px;
-  	line-height: 50px;
-  	text-align: center;
-  	background: #6195FF;
-  	border-radius:3px;
-  	color: #FFF;
-  	z-index: 9999;
+    display:none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #6195FF;
+    border-radius:3px;
+    color: #FFF;
+    z-index: 9999;
     -webkit-transition: 0.2s opacity;
     transition: 0.2s opacity;
-  	cursor: pointer;
+    cursor: pointer;
 }
 
 #back-to-top:after {
@@ -1667,7 +1705,7 @@ header {
 }
 
 /*------------------------------------*\
-	Preloader
+    Preloader
 \*------------------------------------*/
 
 
@@ -1723,10 +1761,10 @@ header {
 }
 
 @-webkit-keyframes preload {
-	0% {
-	   -webkit-transform:scale(0);
-	           transform:scale(0);
-	}
+    0% {
+       -webkit-transform:scale(0);
+               transform:scale(0);
+    }
   50% {
     -webkit-transform:scale(1);
             transform:scale(1);
@@ -1738,10 +1776,10 @@ header {
 }
 
 @keyframes preload {
-	0% {
-	   -webkit-transform:scale(0);
-	           transform:scale(0);
-	}
+    0% {
+       -webkit-transform:scale(0);
+               transform:scale(0);
+    }
   50% {
     -webkit-transform:scale(1);
             transform:scale(1);

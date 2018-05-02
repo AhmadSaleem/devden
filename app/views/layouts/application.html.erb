@@ -10,6 +10,11 @@
   </head>
 
   <body>
-    <%= yield %>
+    <% if current_page?(root_path) %>
+      <%= yield %>
+    <% else %>
+      <%= render "shared/header", transparent_class: "" %>
+      <%= yield %>
+    <% end %>
   </body>
 </html>

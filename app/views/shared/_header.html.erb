@@ -1,0 +1,32 @@
+<nav id="nav" class="navbar <%= transparent_class %>">
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- Logo -->
+      <div class="navbar-brand">
+        <a href="/">
+          <img class="logo" src="<%= asset_path 'logo.png' %>" alt="">
+          <img class="logo-alt" src="<%= asset_path 'logo-alt.png' %>" alt="logo">
+        </a>
+      </div>
+      <!-- /Logo -->
+
+      <!-- Collapse nav button -->
+      <div class="nav-collapse">
+        <span></span>
+      </div>
+      <!-- /Collapse nav button -->
+    </div>
+
+    <!--  Main navigation  -->
+    <ul class="main-nav nav navbar-nav navbar-right">
+      <li><%= link_to "Home", root_path %></li>
+      <li><a href="#about">About</a></li>
+      <li><%= link_to "Portfolio", portfolio_path %></li>
+      <li><a href="#service">Services</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
