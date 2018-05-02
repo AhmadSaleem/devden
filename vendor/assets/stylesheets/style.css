@@ -863,6 +863,17 @@ header {
     font-weight: 300 !important;
 }
 
+#project-description p {
+    margin: 0 0 10px !important;
+    font-size: 19px !important;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    line-height: 24px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    color: #484848 !important;
+    font-weight: 300 !important;
+}
+
 /*------------------------------------*\
     Numbers
 \*------------------------------------*/
@@ -1624,10 +1635,10 @@ header {
 }
 
 .owl-theme .owl-dots .owl-dot:hover span {
-    background: #6195FF;
+    background: #008489;
 }
 .owl-theme .owl-dots .owl-dot.active span {
-      background: #6195FF;
+      background: #008489;
       width:20px;
 }
 
@@ -1649,7 +1660,7 @@ header {
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
-    background: #6195FF;
+    background: #008489;
     color: #FFF;
     padding: 0px;
     width: 50px;
@@ -1669,7 +1680,7 @@ header {
 
 .owl-theme .owl-nav [class*='owl-']:hover {
     opacity: 0.8;
-    background: #6195FF;
+    background: #008489;
 }
 
 
