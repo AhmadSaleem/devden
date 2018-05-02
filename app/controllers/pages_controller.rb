@@ -4,4 +4,7 @@ class PagesController < ApplicationController
 
   def portfolio
   end
+
+  def showportfolio
+  end
 end
