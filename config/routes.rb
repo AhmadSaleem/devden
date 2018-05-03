@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   get 'portfolio', to: "pages#portfolio"
   get 'portfolio/description', to: "pages#showportfolio"
   root to: "pages#index"
+
+  resources :portfolio_items, only: [:index, :show]
 end
