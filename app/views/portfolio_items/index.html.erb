@@ -13,107 +13,25 @@
       <!-- /Section header -->
 
       <!-- Work -->
-      <div class="col-md-4 col-xs-6 work">
-        <img class="img-responsive" src="<%= asset_path 'work1.jpg' %>" alt="">
-        <div class="overlay"></div>
-        <div class="work-content">
-          <span>Category</span>
-          <h3>Lorem ipsum dolor</h3>
-          <div class="work-link">
-            <%= link_to portfolio_description_path do %>
-              <i class="fa fa-external-link"></i>
-            <% end %>
-            <a class="lightbox" href="./img/work1.jpg"><i class="fa fa-search"></i></a>
+
+      <% @portfolio_items.each do |portfolio_item| %>
+        <div class="col-md-4 col-xs-6 work">
+          <%= image_tag portfolio_item.images.first, class: "img-responsive" %>
+          <div class="overlay"></div>
+          <div class="work-content">
+            <span>Category</span>
+            <h3><%= portfolio_item.title %></h3>
+            <div class="work-link">
+              <%= link_to portfolio_item do %>
+                <i class="fa fa-external-link"></i>
+              <% end %>
+              <%= link_to portfolio_item.images.first, class: "lightbox" do %>
+                <i class="fa fa-search"></i>
+              <% end %>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- /Work -->
-
-      <!-- Work -->
-      <div class="col-md-4 col-xs-6 work">
-        <img class="img-responsive" src="<%= asset_path 'work2.jpg' %>" alt="">
-        <div class="overlay"></div>
-        <div class="work-content">
-          <span>Category</span>
-          <h3>Lorem ipsum dolor</h3>
-          <div class="work-link">
-            <%= link_to portfolio_description_path do %>
-              <i class="fa fa-external-link"></i>
-            <% end %>
-            <a class="lightbox" href="./img/work2.jpg"><i class="fa fa-search"></i></a>
-          </div>
-        </div>
-      </div>
-      <!-- /Work -->
-
-      <!-- Work -->
-      <div class="col-md-4 col-xs-6 work">
-        <img class="img-responsive" src="<%= asset_path 'work3.jpg' %>" alt="">
-        <div class="overlay"></div>
-        <div class="work-content">
-          <span>Category</span>
-          <h3>Lorem ipsum dolor</h3>
-          <div class="work-link">
-            <%= link_to portfolio_description_path do %>
-              <i class="fa fa-external-link"></i>
-            <% end %>
-            <a class="lightbox" href="./img/work3.jpg"><i class="fa fa-search"></i></a>
-          </div>
-        </div>
-      </div>
-      <!-- /Work -->
-
-      <!-- Work -->
-      <div class="col-md-4 col-xs-6 work">
-        <img class="img-responsive" src="<%= asset_path 'work4.jpg' %>" alt="">
-        <div class="overlay"></div>
-        <div class="work-content">
-          <span>Category</span>
-          <h3>Lorem ipsum dolor</h3>
-          <div class="work-link">
-            <%= link_to portfolio_description_path do %>
-              <i class="fa fa-external-link"></i>
-            <% end %>
-            <a class="lightbox" href="./img/work4.jpg"><i class="fa fa-search"></i></a>
-          </div>
-        </div>
-      </div>
-      <!-- /Work -->
-
-      <!-- Work -->
-      <div class="col-md-4 col-xs-6 work">
-        <img class="img-responsive" src="<%= asset_path 'work5.jpg' %>" alt="">
-        <div class="overlay"></div>
-        <div class="work-content">
-          <span>Category</span>
-          <h3>Lorem ipsum dolor</h3>
-          <div class="work-link">
-            <%= link_to portfolio_description_path do %>
-              <i class="fa fa-external-link"></i>
-            <% end %>
-            <a class="lightbox" href="./img/work5.jpg"><i class="fa fa-search"></i></a>
-          </div>
-        </div>
-      </div>
-      <!-- /Work -->
-
-      <!-- Work -->
-      <div class="col-md-4 col-xs-6 work">
-        <img class="img-responsive" src="<%= asset_path 'work6.jpg' %>" alt="">
-        <div class="overlay"></div>
-        <div class="work-content">
-          <span>Category</span>
-          <h3>Lorem ipsum dolor</h3>
-          <div class="work-link">
-            <%= link_to portfolio_description_path do %>
-              <i class="fa fa-external-link"></i>
-            <% end %>
-            <a class="lightbox" href="./img/work6.jpg"><i class="fa fa-search"></i></a>
-          </div>
-        </div>
-      </div>
-      <!-- /Work -->
-
+      <% end %>
     </div>
     <!-- /Row -->
 
