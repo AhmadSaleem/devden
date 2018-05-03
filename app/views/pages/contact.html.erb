@@ -45,13 +45,20 @@
 
       <!-- contact form -->
       <div class="col-md-8 col-md-offset-2">
-        <form class="contact-form">
-          <input type="text" class="input" autocomplete="name" placeholder="Name">
-          <input type="email" class="input" autocomplete="email" placeholder="Email">
-          <input type="text" class="input" placeholder="Subject">
-          <textarea class="input" placeholder="Message"></textarea>
-          <button class="main-btn">Send message</button>
-        </form>
+        <%= form_for @message, url: messages_path, html: { class: "contact-form" } do |f| %>
+          <div class="row">
+            <div class="col-md-6 mt-20">
+              <%= f.text_field  :name, class: "input", placeholder: "Name", required: true %>
+            </div>
+
+            <div class="col-md-6 mt-20">
+              <%= f.email_field :email, class: "input", placeholder: "Email", required: true %>
+            </div>
+          </div>
+          <%= f.text_field :subject, class: "input mt-20", placeholder: "Subject", required: true %>
+          <%= f.text_area  :text, class: "input mt-20", placeholder: "Type your message", required: true %>
+          <%= f.submit "Send message", class: "main-btn" %>
+        <% end %>
       </div>
       <!-- /contact form -->
 

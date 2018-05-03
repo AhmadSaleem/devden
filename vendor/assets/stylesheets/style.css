@@ -1504,7 +1504,6 @@ header {
 
 
 .contact-form .input:nth-child(1), .contact-form .input:nth-child(2) {
-    width: calc(50% - 10px);
 }
 
 .contact-form .input:nth-child(2) {

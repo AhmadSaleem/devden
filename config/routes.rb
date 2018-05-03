@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   root to: "pages#index"
 
   resources :portfolio_items, only: [:index, :show]
+  resources :messages, only: [:create]
 end
