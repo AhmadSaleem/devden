@@ -9,4 +9,5 @@ Rails.application.routes.draw do
 
   resources :portfolio_items, only: [:index, :show]
   resources :messages, only: [:create]
+  resources :enquiries, only: [:create]
 end

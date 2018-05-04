@@ -20,11 +20,12 @@
                     <input type="email" autocomplete="email" placeholder="Email" class="email-field">
                   </div>
                   <div class="col-md-4 btn-div">
-                    <button class="main-btn">Send message</button>
+                    <button class="main-btn send-message">Send message</button>
                   </div>
                 </div>
               </form>
             </div>
+            <div id="error" class="hide">Please enter email</div>
           </div>
         </div>
         <!-- /home content -->
@@ -33,5 +34,41 @@
     </div>
   </div>
   <!-- /home wrapper -->
-
 </header>
+
+  <%= form_for @enquiry, url: enquiries_path, remote: true, html: { class: "contact-form" } do |f| %>
+    <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Project Details</h4>
+          </div>
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <%= f.email_field :email, class: "input", id: "user_email", placeholder: "Email", required: true %>
+              </div>
+
+              <div class="col-md-6">
+                <%= f.text_field :project_title, class: "input", placeholder: "Project Title", required: true %>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <%= f.number_field :project_budget, class: "input", placeholder: "Project Budget", required: true %>
+              </div>
+            </div>
+            <%= f.text_area  :project_description, class: "input", placeholder: "Project Description", required: true %>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <%= f.submit "Send", class: "btn send-button" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>

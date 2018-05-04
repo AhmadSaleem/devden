@@ -1,0 +1,9 @@
+<% if @enquiry.errors.any? %>
+  $('.modal-body').prepend("<%= j render 'shared/errors', resource: @enquiry %>");
+<% else %>
+  $('#user_email').val('');
+  $('#enquiry_project_title').val('');
+  $('#enquiry_project_budget').val('');
+  $('#enquiry_project_description').val('');
+  $('#basicModal').modal('toggle');
+<% end %>
