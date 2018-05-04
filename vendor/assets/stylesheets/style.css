@@ -1545,7 +1545,7 @@ header {
   line-height: 50px;
   text-align: center;
   border-radius: 3px;
-  background-color: #6195FF;
+  background-color: #008489;
   color:#FFF;
 }
 
@@ -1723,7 +1723,7 @@ header {
     height: 50px;
     line-height: 50px;
     text-align: center;
-    background: #6195FF;
+    background: #008489;
     border-radius:3px;
     color: #FFF;
     z-index: 9999;
@@ -1766,7 +1766,7 @@ header {
 }
 .preloader span {
     display: inline-block;
-    background-color: #6195FF;
+    background-color: #008489;
     width: 25px;
     height: 25px;
     -webkit-animation: 1s preload ease-in-out infinite;
