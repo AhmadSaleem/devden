@@ -2,7 +2,9 @@ class EnquiriesController < ApplicationController
 
   def create
     @enquiry = Enquiry.new(enquiry_params)
-    @enquiry.save
+    if @enquiry.save
+      EnquiriesMailer.new_enquiry(@enquiry.id).deliver_later
+    end
   end
 
   private
