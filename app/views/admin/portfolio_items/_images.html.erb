@@ -1,0 +1,19 @@
+<div id="admin">
+  <fieldset class="inputs">
+    <% if ["edit", "new"].include? action_name %>
+      <legend>
+        <span>
+          Images
+        </span>
+      </legend>
+    <% end %>
+    <ol class="ol-style">
+      <% portfolio_item.images.each do |image| %>
+        <%= image_tag image, size: "75x75", class: "image" %>
+        <% if ["edit", "new"].include? action_name %>
+          <%= link_to "Remove", remove_image_admin_portfolio_items_path(listing_id: portfolio_item.id ,id: image.id) %>
+        <% end %>
+      <% end %>
+    </ol>
+  </fieldset>
+</div>
