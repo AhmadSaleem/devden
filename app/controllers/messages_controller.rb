@@ -4,9 +4,7 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     if @message.save
       MessagesMailer.new_message(@message.id).deliver_later
-      redirect_to contact_us_path, notice: "Thank you for contacting us."
-    else
-      render "pages/contact"
+      redirect_to root_path, notice: "Thank you for contacting us."
     end
   end
 

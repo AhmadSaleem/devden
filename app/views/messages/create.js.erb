@@ -1,0 +1,8 @@
+<% if @message.errors.any? %>
+  $('#contact-form').html("<%= j render 'pages/contact' %>")
+<% else %>
+  $('#message_name').val('');
+  $('#message_email').val('');
+  $('#message_subject').val('');
+  $('#message_text').val('');
+<% end %>

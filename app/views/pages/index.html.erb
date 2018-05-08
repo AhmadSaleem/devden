@@ -37,8 +37,8 @@
   <!-- /home wrapper -->
 </header>
 
-<%= form_for @enquiry, url: enquiries_path, remote: true, html: { class: "contact-form" } do |f| %>
-  <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+  <%= form_for @enquiry, url: enquiries_path, remote: true, html: { class: "contact-form" } do |f| %>
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -68,5 +68,11 @@
         </div>
       </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
+
+<%= render "about" %>
+<%= render "portfolio" %>
+<div id="contact-form" >
+  <%= render "contact" %>
+</div>

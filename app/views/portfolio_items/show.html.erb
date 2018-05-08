@@ -12,7 +12,11 @@
           <h2 class="title"><%= @portfolio_item.title %></h2>
         </div>
         <p><%= @portfolio_item.description %></p>
-
+        <p id="goback-link">
+          <%= link_to root_path do %>
+            <i class="fa fa-chevron-left" aria-hidden="true"></i> Go Back
+          <% end %>
+        </p>
       </div>
       <!-- /why choose us content -->
 
@@ -28,10 +32,6 @@
 
     </div>
     <!-- /Row -->
-
-    <div class="row">
-      <%= link_to "Go Back ", portfolio_items_path %>
-    </div>
   </div>
 
 
