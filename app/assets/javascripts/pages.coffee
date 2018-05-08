@@ -3,8 +3,6 @@ $ ->
   #/////////////////////////
   # Preloader
   $(document).on 'turbolinks:load', ->
-    $('#preloader').delay(600).fadeOut()
-  #/////////////////////////
   # Scrollspy
     $('body').scrollspy
       target: '#nav'
