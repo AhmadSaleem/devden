@@ -9,7 +9,7 @@ $(document).on 'turbolinks:load', ->
       return
     else if (!validEmail(email))
       $('#error').removeClass 'hide'
-      $('#error').text("Invalid Email")
+      $('#error').text("Invalid email")
       return
     else
       $('#error').addClass 'hide'
