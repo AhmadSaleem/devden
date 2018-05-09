@@ -38,33 +38,108 @@
 </header>
 
 <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-  <%= form_for @enquiry, url: enquiries_path, remote: true, html: { class: "contact-form" } do |f| %>
+  <%= form_for @enquiry, url: enquiries_path, remote: true, html: { class: "enquiry-form" } do |f| %>
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title" id="myModalLabel">Project Details</h4>
+          <p class="modal-title" id="myModalLabel">Start a Project with Us!</p>
+          <p class="modal-subtitle"> We'd love to know more about your project and required skills-sets</p>
+
         </div>
 
         <div class="modal-body">
           <div class="row">
-            <div class="col-md-6">
-              <%= f.email_field :email, class: "input", id: "user_email", placeholder: "Email", required: true %>
-            </div>
-
-            <div class="col-md-6">
-              <%= f.text_field :project_title, class: "input", placeholder: "Project Title", required: true %>
-            </div>
-
-            <div class="col-md-12">
-              <%= f.text_area :project_description, class: "input", placeholder: "Project Description", required: true %>
+            <div class="col-md-12 section-title">
+              <p>About Your Project</p>
             </div>
           </div>
-        </div>
 
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <%= f.submit "Send", class: "btn send-button" %>
+          <div class="row">
+            <div class="col-md-12">
+              <%= f.label "What are you building?" %><br />
+              <%= f.text_field :project_title, class: "input", placeholder: "140 characters or less", required: true %>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <%= f.label "What you need to get done?" %><br />
+              <%= f.text_area :project_description, class: "input", placeholder: "", required: true %>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 section-title">
+              <p>Project Requirments</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 modal-fields">
+              <%= f.label "Building a new project or expending your team?" %><br />
+              <div class="col-md-4">
+                <%= f.radio_button :new_project, 1 %>
+                <%= f.label :new_project, "New Project", value: "true"  %>
+              </div>
+              <div class="col-md-8">
+                <%= f.radio_button :new_project, 0, checked: true %>
+                <%= f.label :new_project, "Expanding team on Existing Project", value: "false" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 modal-fields">
+              <%= f.label "What you want to create?" %><br />
+              <% Enquiry.project_types.each do |key, value| %>
+                <%= f.label value, value: key, class: "project_type", id: "#{key}" %>
+              <% end %>
+            </div>
+          </div>
+
+          <%= f.hidden_field :project_type, value: "" %>
+          <%= f.hidden_field :service_required, value: "" %>
+
+          <div class="row">
+            <div class="col-md-12 modal-fields">
+              <%= f.label "Services Required?" %><br />
+              <% Enquiry.service_requireds.each do |key, value| %>
+                <%= f.label value, value: key, class: "services_type", id: "#{key}" %>
+              <% end %>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 section-title">
+              <p>Your Information</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <%= f.label "Your Email" %><br />
+              <%= f.email_field :email, class: "input", id: "user_email", placeholder: "Email", required: true %>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <%= f.label "Your Name" %><br />
+              <%= f.text_field :name, class: "input", placeholder: "", required: true %>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <%= f.label :phone_number %><br />
+              <%= f.text_field :phone_number, class: "input", placeholder: "", required: true %>
+            </div>
+          </div>
+
+          <div class="send-button-div">
+            <%= f.submit "Submit Details", class: "btn send-button" %>
+          </div>
         </div>
       </div>
     </div>

@@ -21,3 +21,17 @@ $(document).on 'turbolinks:load', ->
   validEmail = (email) ->
     re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     re.test email
+
+
+  $('.project_type').click (e) ->
+    $('.project_type').removeClass 'button-on-click'
+    $(this).addClass 'button-on-click'
+    project_type = this.id
+    $('#enquiry_project_type').val(project_type)
+
+
+  $('.services_type').click (e) ->
+    $('.services_type').removeClass 'button-on-click'
+    $(this).addClass 'button-on-click'
+    service_type = this.id
+    $('#enquiry_service_required').val(service_type)
