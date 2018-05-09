@@ -12,6 +12,6 @@ class Enquiry < ApplicationRecord
     project_management: 5
   }
 
-  validates :email, :project_title, :project_description, :project_type, :service_required, :phone_number,
+  validates :email, :project_title, :project_description, :project_type, :service_required, :phone_number, :name,
             presence: true
 end
