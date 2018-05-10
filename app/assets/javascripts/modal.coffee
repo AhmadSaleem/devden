@@ -5,7 +5,7 @@ $(document).on 'turbolinks:load', ->
     email = $('.email-field').val()
     if(email == "")
       $('#error').removeClass 'hide'
-      $('#error').text("Please enter email")
+      $('#error').text("Email Required")
       return
     else if (!validEmail(email))
       $('#error').removeClass 'hide'
