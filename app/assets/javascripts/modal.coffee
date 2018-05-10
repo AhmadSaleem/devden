@@ -35,3 +35,13 @@ $(document).on 'turbolinks:load', ->
     $(this).addClass 'button-on-click'
     service_type = this.id
     $('#enquiry_service_required').val(service_type)
+
+  $('[data-dismiss=modal]').on 'click', (e) ->
+    $t = $(this)
+    target = $t[0].href or $t.data('target') or $t.parents('.modal') or []
+    $(target).find('textarea, select').val('').end()
+             .find('input[type=checkbox], input[type=radio]').prop('checked', '').end()
+             .find('input[type!=submit]').val('').end()
+    $('.project_type').removeClass 'button-on-click'
+    $('.services_type').removeClass 'button-on-click'
+    return
