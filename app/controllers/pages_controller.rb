@@ -1,6 +1,8 @@
 class PagesController < ApplicationController
   def index
     @enquiry = Enquiry.new
+    @portfolio_items = PortfolioItem.all
+    @message = Message.new
   end
 
   def about

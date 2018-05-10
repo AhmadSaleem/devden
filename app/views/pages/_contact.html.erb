@@ -1,0 +1,72 @@
+<!-- Contact -->
+<div id="contact" class="section md-padding">
+
+  <!-- Container -->
+  <div class="container">
+
+    <!-- Row -->
+    <div class="row">
+
+      <!-- Section-header -->
+      <div class="section-header text-center">
+        <h2 class="title">Get in touch</h2>
+      </div>
+      <!-- /Section-header -->
+
+      <!-- contact -->
+      <div class="col-sm-4">
+        <div class="contact">
+          <i class="fa fa-phone"></i>
+          <h3>Phone</h3>
+          <p>512-421-3940</p>
+        </div>
+      </div>
+      <!-- /contact -->
+
+      <!-- contact -->
+      <div class="col-sm-4">
+        <div class="contact">
+          <i class="fa fa-envelope"></i>
+          <h3>Email</h3>
+          <p>email@support.com</p>
+        </div>
+      </div>
+      <!-- /contact -->
+
+      <!-- contact -->
+      <div class="col-sm-4">
+        <div class="contact">
+          <i class="fa fa-map-marker"></i>
+          <h3>Address</h3>
+          <p>1739 Bubby Drive</p>
+        </div>
+      </div>
+      <!-- /contact -->
+
+      <!-- contact form -->
+      <div class="col-md-8 col-md-offset-2">
+        <%= form_for @message, url: messages_path, remote: true, html: { class: "contact-form" } do |f| %>
+          <div class="row">
+            <div class="col-md-6 mt-20">
+              <%= f.text_field  :name, class: "input", placeholder: "Name", required: true %>
+            </div>
+
+            <div class="col-md-6 mt-20">
+              <%= f.email_field :email, class: "input", placeholder: "Email", required: true %>
+            </div>
+          </div>
+          <%= f.text_field :subject, class: "input mt-20", placeholder: "Subject", required: true %>
+          <%= f.text_area  :text, class: "input mt-20", placeholder: "Type your message", required: true %>
+          <%= f.submit "Send message", class: "main-btn" %>
+        <% end %>
+      </div>
+      <!-- /contact form -->
+
+    </div>
+    <!-- /Row -->
+
+  </div>
+  <!-- /Container -->
+
+</div>
+<!-- /Contact -->
