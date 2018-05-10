@@ -6,8 +6,20 @@
 
 <p>Project Title: <%= @enquiry.project_title %></p>
 
-<p>Project Budget: <%= @enquiry.project_budget %></p>
+<p>For more info click on the following link</p>
 
-<p>Projct Description: </p>
-
-<p><%= @enquiry.project_description %></p>
+<table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
+  <tbody>
+    <tr>
+      <td align="left">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td><%= link_to "Full Details", admin_enquiry_url(@enquiry.id), class: "btn btn-primary" %></td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>

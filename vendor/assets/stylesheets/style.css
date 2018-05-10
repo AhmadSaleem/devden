@@ -880,7 +880,6 @@ header {
 }
 
 #project-description p {
-    margin: 0 0 10px !important;
     font-size: 19px !important;
     font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
     line-height: 24px !important;
