@@ -15,9 +15,17 @@
 
         <!-- footer follow -->
         <ul class="footer-follow">
-          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          <li>
+            <%= link_to facebook_url, target: '_blank' do %>
+              <i class="fa fa-facebook"></i>
+            <% end %>
+          </li>
+
+          <li>
+            <%= link_to linkedin_url, target: '_blank' do %>
+              <i class="fa fa-linkedin"></i>
+            <% end %>
+          </li>
         </ul>
         <!-- /footer follow -->
 
