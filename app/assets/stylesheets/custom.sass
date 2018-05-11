@@ -1,8 +1,6 @@
 .form-content
   background: white
   border-radius: 7px
-  width: 800px
-  margin-left: 44px
 
   .email-field
     height: 70px
@@ -23,6 +21,43 @@
 
   .btn-div
     padding-bottom: 15px
+
+@media screen and (max-width: 992px)
+  .form-content
+    background: none
+
+    .email-field
+      text-align: center
+      height: 50px
+
+    .email-div
+      padding-left: 10px
+      padding-right: 10px
+
+  .enquiry-form
+    .modal-dialog
+      width: 75% !important
+
+  #error
+    margin-top: -162px !important
+    padding-left: 41%
+
+@media screen and (max-width: 400px)
+  .enquiry-form
+    .modal-dialog
+      width: 100% !important
+
+    .close
+      font-size: 30px
+      margin-top: -16px
+      margin-right: -6px
+
+    .send-button
+      width: 328px !important
+
+  #error
+    margin-top: -162px !important
+    padding-left: 41%
 
 #home
   background-color: #FAFAFA
@@ -53,8 +88,8 @@
 
 #error
   float: left
-  margin-left: 45px
   margin-top: 5px
+  margin-left: 8px
   color: red
   font-familty: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif
 
@@ -114,7 +149,7 @@
     margin: 11px
 
   .modal-dialog
-    width: 733px
+    width: 56%
     margin: 30px auto
 
   .button-on-click
