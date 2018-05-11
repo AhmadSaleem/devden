@@ -24,17 +24,21 @@ $(document).on 'turbolinks:load', ->
 
 
   $('.project_type').click (e) ->
-    $('.project_type').removeClass 'button-on-click'
-    $(this).addClass 'button-on-click'
-    project_type = this.id
-    $('#enquiry_project_type').val(project_type)
+    if $(this).hasClass 'button-on-click'
+      $(this).removeClass 'button-on-click'
+    else
+      $(this).addClass 'button-on-click'
+
+    $('#enquiry_project_type').val(this.id)
 
 
   $('.services_type').click (e) ->
-    $('.services_type').removeClass 'button-on-click'
-    $(this).addClass 'button-on-click'
-    service_type = this.id
-    $('#enquiry_service_required').val(service_type)
+    if $(this).hasClass 'button-on-click'
+      $(this).removeClass 'button-on-click'
+    else
+      $(this).addClass 'button-on-click'
+
+    $('#enquiry_service_required').val(this.id)
 
   $('[data-dismiss=modal]').on 'click', (e) ->
     $t = $(this)
