@@ -43,9 +43,8 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <p class="modal-title" id="myModalLabel">Start a Project with Us!</p>
-          <p class="modal-subtitle"> We'd love to know more about your project and required skills-sets</p>
-
+          <p class="modal-title" id="myModalLabel">Hire a Team!</p>
+          <p class="modal-subtitle">We'd love to know about your project and needs in detail</p>
         </div>
 
         <div class="modal-body">
@@ -57,15 +56,15 @@
 
           <div class="row">
             <div class="col-md-12">
-              <%= f.label "What are you building?" %><br />
-              <%= f.text_field :project_title, class: "input", placeholder: "140 characters or less", required: true %>
+              <%= f.label "Title" %><br />
+              <%= f.text_field :project_title, class: "input", required: true %>
             </div>
           </div>
 
           <div class="row">
             <div class="col-md-12">
-              <%= f.label "What you need to get done?" %><br />
-              <%= f.text_area :project_description, class: "input", placeholder: "", required: true %>
+              <%= f.label "Description" %><br />
+              <%= f.text_area :project_description, class: "input", required: true %>
             </div>
           </div>
 
@@ -77,21 +76,7 @@
 
           <div class="row">
             <div class="col-md-12 modal-fields">
-              <%= f.label "Building a new project or expending your team?" %><br />
-              <div class="col-md-4">
-                <%= f.radio_button :new_project, 1 %>
-                <%= f.label :new_project, "New Project", value: "true"  %>
-              </div>
-              <div class="col-md-8">
-                <%= f.radio_button :new_project, 0, checked: true %>
-                <%= f.label :new_project, "Expanding team on Existing Project", value: "false" %>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12 modal-fields">
-              <%= f.label "What you want to create?" %><br />
+              <%= f.label "What do you want to create?" %><br />
               <% Enquiry.project_types.each do |key, value| %>
                 <%= f.label value, value: key, class: "project_type", id: "#{key}" %>
               <% end %>
@@ -146,7 +131,7 @@
   <% end %>
 </div>
 
-<%= render "about" %>
+<%= render "services" %>
 <%= render "portfolio" %>
 <div id="contact-form" >
   <%= render "contact" %>
