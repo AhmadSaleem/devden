@@ -19,10 +19,10 @@
 
     <!--  Main navigation  -->
     <ul class="main-nav nav navbar-nav navbar-right">
-      <li><%= link_to "Home", "#home" %></li>
-      <li><%= link_to "Services", "#services" %></li>
-      <li><%= link_to "Portfolio", "#portfolio" %></li>
-      <li><%= link_to "Contact", "#contact" %>
+      <li><%= link_to "Home", render_path("home") %></li>
+      <li><%= link_to "Services", render_path("services") %></li>
+      <li><%= link_to "Portfolio", render_path("portfolio") %></li>
+      <li><%= link_to "Contact", render_path("contact") %>
     </ul>
   </div>
 </nav>
