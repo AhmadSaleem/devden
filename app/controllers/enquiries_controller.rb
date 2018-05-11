@@ -3,7 +3,7 @@ class EnquiriesController < ApplicationController
   def create
     @enquiry = Enquiry.new(enquiry_params)
     if @enquiry.save
-      EnquiriesMailer.new_enquiry(@enquiry.id).deliver_later
+      EnquiriesMailer.new_enquiry(@enquiry.id).deliver!
     end
   end
 
